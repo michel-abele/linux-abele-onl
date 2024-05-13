@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import { prerender } from 'vite-plugin-prerender'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,7 +14,6 @@ export default defineConfig({
                 { dir: 'src/pages/de', baseRoute: '/de' },
             ],
         }),
-        Layouts(),
-        prerender()
+        Layouts()
     ]
 })
