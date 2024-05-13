@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue';
+import { watch, ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { languageVariables } from './utils/languageVariables.js';
 import tuxSmall from './assets/img/tux-small.png';
@@ -61,6 +61,10 @@ export default {
 
         const languageVars = computed(() => languageVariables[currentLanguage.value]);
         const languageZone = computed(() => currentLanguage.value);
+
+        watch(languageZone, (newLang) => {
+            document.documentElement.lang = newLang;
+        }, { immediate: true });
 
         return { languageZone, languageVars, changeLanguage };
     },

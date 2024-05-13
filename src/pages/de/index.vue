@@ -16,6 +16,9 @@
 
 <script>
 export default {
-    name: 'de'
+    name: 'de',
+    mounted() {
+        document.title = 'Startseite - linux.abele.onl';
+    }
 }
 </script>

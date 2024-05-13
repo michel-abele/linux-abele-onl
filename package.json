@@ -12,6 +12,7 @@
     "bootstrap": "^5.3.3",
     "pinia": "^2.1.7",
     "sass": "^1.77.1",
+    "sitemap": "^7.1.1",
     "vite-plugin-pages": "^0.32.1",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vue": "^3.4.21",
