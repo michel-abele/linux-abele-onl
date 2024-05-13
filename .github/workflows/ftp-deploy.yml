@@ -19,7 +19,7 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm install pinia vite-plugin-pages vue-router@4 vite-plugin-vue-layouts bootstrap@5 sass
+      run: npm install pinia vite-plugin-pages vue-router@4 vite-plugin-vue-layouts bootstrap@5 sass vite-plugin-prerender
 
     - name: Build
       run: npm run build

@@ -8,19 +8,37 @@
 
 :gb:|:us: [English version](https://github.com/michel-abele/linux-abele-onl/blob/main/readme.en.md)
 
+## Über dieses Repository
 
+Dieses Repository dient als umfassende Sammlung aller Elemente meines Webprojekts. Es enthält sowohl den Quellcode als auch alle Inhalte meiner persönlichen Webseite. Die öffentliche Zugänglichkeit des Repositories verfolgt den Zweck, Interessierten Einblick in meinen Entwicklungsprozess zu gewähren und zu demonstrieren, wie ich die Automatisierung der Webseite über GitHub umgesetzt habe.
 
+### Zielgruppe
 
+Die Hauptzielgruppe dieses Repositories sind:
 
+- **Potenzielle Arbeitgeber**: Um ihnen einen detaillierten Einblick in meine Fähigkeiten und Arbeitsweise als Entwickler zu bieten.
+- **Freelance-Kunden**: Um das Vertrauen in meine Dienstleistungen zu stärken und meine Expertise in der Webentwicklung zu veranschaulichen.
 
+Ich lade Sie herzlich ein, sich mit dem Inhalt dieses Repositories vertraut zu machen und stehe für Rückfragen und Diskussionen zur Verfügung.
 
+Den Code und Inhalt dieser Webseite kannst du nach Lust und Laune kopieren.
 
+## Webseitenaufbau
 
+### Entwicklungsumgebung
 
-# Vue 3 + Vite
+Für dieses Projekt habe ich mich für eine Kombination aus Vite und Vue als Kern-Technologien entschieden. Als Entwicklungs- und Testumgebung dient mir daher Vite in Verbindung mit Node.js.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Backend
 
-## Recommended IDE Setup
+Im Backend verwende ich spezialisierte PHP-Dateien die eine API anbieten, die z. B. Datenbankabfragen durchführen. Alles andere habe ich auf das Frontend ausgelagert, das mit den PHP-Dateien interagiert.
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+### Frontend
+
+Im Frontend setze ich auf die Kombination von Vue und Bootstrap. Bootstrap dient dabei als Grundgerüst für das Layout, während eine individuell angepasste S/CSS-Datei das Design verfeinert.
+
+Der größte Teil dieses Projekt läuft über das Frontend aus Vue. Dieses übernimmt das Routing und Aufrufen der Seiten, das Reagieren auf Benutzeraktionen und die dynamische Auslieferung der Inhalte.
+
+### Deploy
+
+Die Veröffentlichung der Webseite erfolgt über einen automatisierten Workflow auf GitHub. Jedes Mal, wenn in den Hauptzweig (main branch) Änderungen eingepflegt werden, beispielsweise durch das Zusammenführen (Merge) aus einem Feature-Branch, wird dieser Workflow aktiviert. In einem ersten Schritt wird ein Build-Prozess ausgelöst, der die eigentliche Webseite erstellt. Im zweiten Schritt werden die aktualisierten Dateien auf den Webserver, genauer gesagt auf den FTP-Server, übertragen. Anschließend wird der Cache der Webseite bei Cloudflare geleert, um sicherzustellen, dass die neuen Inhalte unverzüglich verfügbar sind.
